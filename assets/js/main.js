@@ -37,6 +37,7 @@ function  setDetail(self){
     userLabel.innerHTML=labelDetail;
     userValue.innerHTML=valueDetail;
 }
+// fetch api
 async function fetchRandomUser() {
     try {
 
@@ -76,6 +77,7 @@ async function fetchRandomUser() {
         console.error("Error:", error);
     }
 }
+// create event detail user
 function createEventDetailUser(){
     const userInfo = document.querySelectorAll('.user-info li');
 
