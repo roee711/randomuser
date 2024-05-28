@@ -1,0 +1,164 @@
+/* ===== Begin global ===== */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    background: #2c2e31;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+}
+.container{
+    max-width: 730px;
+    margin: 0px auto;
+    padding: 30px 0px;
+}
+
+.row{
+    display: flex;
+}
+/* ===== End  global ===== */
+
+/* ===== Begin card ===== */
+.card{
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+    border-radius:25px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+.card:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    top: 0;
+    background: #f9f9f9;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    z-index: -1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.user-row-photo{
+ justify-content: center;
+}
+.user-photo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+.user-row-name{
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.user-value{
+    font-size: 35px;
+}
+.user-row-info{
+    justify-content: center;
+}
+.user-info{
+    display: flex;
+}
+.user-info li{
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 48px;
+    margin: 20px;
+    background-image: url(../images/icons.png);
+    background-size: 378px;
+    background-position-y: -48px;
+    transition: all .25s ease-out;
+}
+.user-info  li[data-info=name] {
+    background-position: 0 -48px;
+}
+.user-info li[data-info=email] {
+    background-position: -68px -48px;
+}
+.user-info li[data-info=location] {
+    background-position: -203px -48px;
+}
+.user-info li[data-info=birthday] {
+    background-position: -135px -48px;
+}
+.user-info li[data-info=phone] {
+    background-position: -270px -48px;
+}
+.user-info li[data-info=pass] {
+    background-position: -338px -48px;
+}
+.user-info li.active[data-info=name] {
+    background-position: 0 -96px;
+}
+.user-info li.active[data-info=email] {
+    background-position: -68px -96px;
+}
+
+.user-info li.active[data-info=location] {
+    background-position: -203px -96px;
+}
+.user-info li.active[data-info=birthday] {
+    background-position: -135px -96px;
+}
+.user-info li.active[data-info=phone] {
+    background-position: -270px -96px;
+}
+.user-info li.active[data-info=pass] {
+    background-position: -338px -96px;
+}
+
+/* ===== End card ===== */
+
+/*  ===== Begin new user =====  */
+.new-user-row {
+    justify-content: center;
+}
+#new-user{
+    background: #3498db;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 10px;
+    border: 0px;
+    display: none;
+    cursor: pointer;
+}
+/*  ===== End new user =====  */
+
+/*  ===== Begin loader =====  */
+.loader-row{
+    justify-content: center;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/*  ===== End loader =====  */
